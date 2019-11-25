@@ -1,6 +1,6 @@
 import React from "react";
 import { Translation } from "react-i18next";
-import Language from "./Language";
+import { Language } from "./hfI18n";
 
 class App extends React.Component {
   render() {
