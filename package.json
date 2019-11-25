@@ -1,17 +1,31 @@
 {
-  "name": "my-app",
+  "name": "hf-i18n",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/index.js",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
   "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "i18next": "^19.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-i18next": "^11.2.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "transpile": "babel src/Language.jsx --out-file dist/index.js",
+    "copy-css": "babel src/css --out-dir dist/css --copy-files",
+    "copy-img": "babel src/img --out-dir dist/img --copy-files",
+    "copy-js": "babel src/i18n.js --out-dir dist --copy-files",
+    "prepublishOnly": "npm run transpile & npm run copy-css & npm run copy-img & npm run copy-js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +41,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsiaofung/hf-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hsiaofung/hf-i18n/issues"
+  },
+  "homepage": "https://github.com/hsiaofung/hf-i18n#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6"
   }
 }
