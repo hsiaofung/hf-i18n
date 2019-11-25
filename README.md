@@ -29,8 +29,14 @@ yarn add hf-i18n
 import React from "react";
 import { Translation } from "react-i18next";
 import { Language } from "./hfi18n";
+import i18n from "i18next";
 
 class App extends React.Component {
+   componentDidMount() {
+    i18n.on("languageChanged", function(lng) {//當changeLanguage被呼叫。
+      console.log(lng); //可以在這裡增加語言改變時的行為。
+    });
+  }
   render() {
     return (
       <div className="App">
