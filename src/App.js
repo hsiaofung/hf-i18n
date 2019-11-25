@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import { Translation } from "react-i18next";
 import Language from "./Language";
 
