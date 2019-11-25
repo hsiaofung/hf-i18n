@@ -3,11 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.Language = exports.i18nInit = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _i18next = _interopRequireDefault(require("i18next"));
+
+var _reactI18next = require("react-i18next");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,15 +27,38 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var i18nInit = function i18nInit(languageList) {
+  var resources = {};
+
+  for (var key in languageList) {
+    resources[key] = {
+      translation: languageList[key]
+    };
+  }
+
+  _i18next.default.use(_reactI18next.initReactI18next).init({
+    resources: resources,
+    //翻譯
+    lng: "zhTW",
+    //預設語言
+    fallbackLng: "zhTW",
+    //如果當前切換的語言沒有對應的翻譯則使用這個語言，
+    interpolation: {
+      escapeValue: false //如果語系檔中有巢狀的結構，則escapeValue要設為false，這樣就可以透過物件的方式來取得巢狀內的翻譯
+
+    }
+  });
+};
+
+exports.i18nInit = i18nInit;
 
 var Language =
 /*#__PURE__*/
@@ -41,34 +66,22 @@ function (_Component) {
   _inherits(Language, _Component);
 
   function Language() {
-    var _getPrototypeOf2;
-
-    var _this;
-
     _classCallCheck(this, Language);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Language)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "clickLanguage", function (event) {
-      _i18next.default.changeLanguage(event.target.value);
-    });
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Language).apply(this, arguments));
   }
 
   _createClass(Language, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("p", null, _react.default.createElement("button", {
-        value: "en",
-        onClick: this.clickLanguage
+        onClick: function onClick() {
+          return _i18next.default.changeLanguage("en");
+        }
       }, "EN"), _react.default.createElement("button", {
-        value: "zhTW",
-        onClick: this.clickLanguage
+        onClick: function onClick() {
+          return _i18next.default.changeLanguage("zhTW");
+        }
       }, "\u7E41")));
     }
   }]);
@@ -76,4 +89,4 @@ function (_Component) {
   return Language;
 }(_react.Component);
 
-exports.default = Language;
+exports.Language = Language;

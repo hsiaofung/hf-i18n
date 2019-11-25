@@ -3,12 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { i18nInit, Language } from "./hfI18n";
+import { i18nInit } from "./hfi18n";
 import en from "./locales/en.json";
 import zhTW from "./locales/zhTW.json";
 
-const languageList = { en, zhTW };
-i18nInit(languageList);
+i18nInit({ en, zhTW });
 ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,6 +1,6 @@
 {
   "name": "hf-i18n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "peerDependencies": {
     "react": "^16.12.0",
@@ -21,10 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "transpile": "babel src/Language.jsx --out-file dist/index.js",
+    "transpile": "babel src/hfi18n.js --out-file dist/index.js",
     "copy-css": "babel src/css --out-dir dist/css --copy-files",
     "copy-img": "babel src/img --out-dir dist/img --copy-files",
-    "copy-js": "babel src/i18n.js --out-dir dist --copy-files",
     "prepublishOnly": "npm run transpile & npm run copy-css & npm run copy-img & npm run copy-js"
   },
   "eslintConfig": {
