@@ -16,8 +16,9 @@ yarn add hf-i18n
 
 ## API
 
-- i18nInit:
-  - languageList: 物件，語言檔的 path。語言的縮寫必須依照 i18n 的規範。
+- i18nInit function(languageList)
+  - languageList參數: 資料型態:物件，其為語言檔的 path。語言的縮寫必須依照 i18n 的規範。
+- Language 元件: API 無。  
 
 ## CSS
 
