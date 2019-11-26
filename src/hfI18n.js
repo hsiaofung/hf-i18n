@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import "./css/language.css";
 
 export const i18nInit = function(languageList) {
   let resources = {};
@@ -21,12 +22,22 @@ export const i18nInit = function(languageList) {
 
 export class Language extends Component {
   render() {
+    const { lang } = this.props;
     return (
-      <div>
-        <p>
-          <button onClick={() => i18n.changeLanguage("en")}>EN</button>
-          <button onClick={() => i18n.changeLanguage("zhTW")}>繁</button>
-        </p>
+      <div className="menu_btn_wrap menu_lang">
+        <div className="content">
+          <span className="hoverChangeColor">
+            {lang === "zhTW" ? "繁" : "EN"}
+          </span>
+          <div className="submenu">
+            <a>
+              <button onClick={() => i18n.changeLanguage("zhTW")}>繁</button>
+            </a>
+            <a>
+              <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
