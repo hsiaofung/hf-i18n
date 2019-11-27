@@ -2,6 +2,7 @@ import React from "react";
 import { Translation } from "react-i18next";
 import { Language } from "./hfI18n";
 import i18n from "i18next";
+import "./App.css";
 
 class App extends React.Component {
   state = { lng: "zhTW" };
