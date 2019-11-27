@@ -1,4 +1,4 @@
-.menu_btn_wrap button {
+.language-btn-wrap button {
   /*reset */
   border: none;
   margin: 0;
@@ -10,7 +10,7 @@
   margin-bottom: 0.5rem;
   text-align: left;
 }
-.menu_btn_wrap {
+.language-btn-wrap {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5rem;
@@ -18,7 +18,7 @@
   position: relative;
   font-size: 13px;
 }
-.menu_btn_wrap::after {
+.language-btn-wrap::after {
   content: "";
   display: block;
   position: absolute;
@@ -28,19 +28,19 @@
   width: 1px;
   background: #1a1a1a;
 }
-.menu_btn_wrap > .content {
+.language-btn-wrap > .content {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
   border: 1px solid blue;
   position: relative;
 }
-.menu_btn_wrap > .content:hover .submenu,
-.menu_btn_wrap > .content:active .submenu,
-.menu_btn_wrap > .content:focus .submenu {
+.language-btn-wrap > .content:hover .submenu,
+.language-btn-wrap > .content:active .submenu,
+.language-btn-wrap > .content:focus .submenu {
   display: block;
 }
-.menu_btn_wrap .submenu {
+.language-btn-wrap .submenu {
   width: 1rem;
   display: block;
   position: absolute;
@@ -49,15 +49,15 @@
   padding: 1.25rem 0;
   border: 1px solid red;
 }
-.menu_btn_wrap .hoverChangeColor:hover,
-.menu_btn_wrap .hoverChangeColor:active {
+.language-btn-wrap .hoverChangeColor:hover,
+.language-btn-wrap .hoverChangeColor:active {
   color: #005d83;
 }
 
-.menu_btn_wrap .hoverChangeColor:focus {
+.language-btn-wrap .hoverChangeColor:focus {
   color: #005d83;
 }
 
-.menu_btn_wrap .submenu a:last-child {
+.language-btn-wrap .submenu a:last-child {
   margin-bottom: 0;
 }

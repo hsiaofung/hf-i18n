@@ -24,7 +24,7 @@ export class Language extends Component {
   render() {
     const { lang } = this.props;
     return (
-      <div className="menu_btn_wrap menu_lang">
+      <div className="language-btn-wrap">
         <div className="content">
           <span className="hoverChangeColor">
             {lang === "zhTW" ? "繁" : "EN"}
