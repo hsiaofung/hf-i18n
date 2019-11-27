@@ -26,6 +26,7 @@ yarn add hf-i18n
 - .language-btn-wrap : 整個外包一層。
 - .language-btn-wrap .submenu button : 下拉式選單的按鈕的 style
 - .language-btn-wrap .submenu : 下拉式選單的 style
+- .language-btn-wrap::after : 可設定 display:none 來隱藏垂直的分隔線。
 
 ## 使用方法
 

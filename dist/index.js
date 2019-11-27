@@ -11,6 +11,8 @@ var _i18next = _interopRequireDefault(require("i18next"));
 
 var _reactI18next = require("react-i18next");
 
+require("./css/language.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -74,15 +76,24 @@ function (_Component) {
   _createClass(Language, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("p", null, _react.default.createElement("button", {
-        onClick: function onClick() {
-          return _i18next.default.changeLanguage("en");
-        }
-      }, "EN"), _react.default.createElement("button", {
+      var lang = this.props.lang;
+      return _react.default.createElement("div", {
+        className: "language-btn-wrap"
+      }, _react.default.createElement("div", {
+        className: "content"
+      }, _react.default.createElement("span", {
+        className: "hoverChangeColor"
+      }, lang === "zhTW" ? "繁" : "EN"), _react.default.createElement("div", {
+        className: "submenu"
+      }, _react.default.createElement("button", {
         onClick: function onClick() {
           return _i18next.default.changeLanguage("zhTW");
         }
-      }, "\u7E41")));
+      }, "\u7E41"), _react.default.createElement("button", {
+        onClick: function onClick() {
+          return _i18next.default.changeLanguage("en");
+        }
+      }, "EN"))));
     }
   }]);
 

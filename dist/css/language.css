@@ -29,7 +29,7 @@
 }
 .language-btn-wrap .submenu {
   width: 1em;
-  display: block;
+  display: none;
   position: absolute;
   text-align: left;
   background: #fff;
