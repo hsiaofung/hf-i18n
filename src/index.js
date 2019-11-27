@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { i18nInit } from "./hfi18n";
+import { i18nInit } from "./hfI18n";
 import en from "./locales/en.json";
 import zhTW from "./locales/zhTW.json";
 
