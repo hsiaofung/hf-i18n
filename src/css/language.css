@@ -1,16 +1,3 @@
-.language-btn-wrap button {
-  /*reset */
-  border: none;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  outline: none;
-  cursor: pointer;
-  /*reset end*/
-  margin-bottom: 0.5em;
-  text-align: left;
-  font-size: 1em;
-}
 .language-btn-wrap {
   display: inline-block;
   vertical-align: middle;
@@ -47,6 +34,19 @@
   text-align: left;
   background: #fff;
   padding: 1.25em 0;
+}
+.language-btn-wrap .submenu button {
+  /*reset */
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  /*reset end*/
+  margin-bottom: 0.5em;
+  text-align: left;
+  font-size: 1em;
 }
 .language-btn-wrap .hoverChangeColor:hover,
 .language-btn-wrap .hoverChangeColor:active {

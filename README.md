@@ -23,7 +23,9 @@ yarn add hf-i18n
 ## CSS
 
 - language 的 font-size 使用 em 為單位，可在 language 外層設定 font-size。或改變.language-btn-wrap font-size 的屬性。
-- .language-btn-wrap :
+- .language-btn-wrap : 整個外包一層。
+- .language-btn-wrap .submenu button : 下拉式選單的按鈕的 style
+- .language-btn-wrap .submenu : 下拉式選單的 style
 
 ## 使用方法
 
