@@ -1,4 +1,4 @@
-button {
+.menu_btn_wrap button {
   /*reset */
   border: none;
   margin: 0;
@@ -6,6 +6,9 @@ button {
   background: transparent;
   outline: none;
   cursor: pointer;
+  /*reset end*/
+  margin-bottom: 0.5rem;
+  text-align: left;
 }
 .menu_btn_wrap {
   display: inline-block;
@@ -15,7 +18,7 @@ button {
   position: relative;
   font-size: 13px;
 }
-/* .menu_btn_wrap::after {
+.menu_btn_wrap::after {
   content: "";
   display: block;
   position: absolute;
@@ -24,7 +27,7 @@ button {
   height: 1rem;
   width: 1px;
   background: #1a1a1a;
-} */
+}
 .menu_btn_wrap > .content {
   cursor: pointer;
   display: inline-block;
@@ -38,7 +41,7 @@ button {
   display: block;
 }
 .menu_btn_wrap .submenu {
-  width: 100%;
+  width: 1rem;
   display: block;
   position: absolute;
   text-align: left;
@@ -46,19 +49,15 @@ button {
   padding: 1.25rem 0;
   border: 1px solid red;
 }
-.hoverChangeColor:hover,
-.hoverChangeColor:active {
+.menu_btn_wrap .hoverChangeColor:hover,
+.menu_btn_wrap .hoverChangeColor:active {
   color: #005d83;
 }
 
-.hoverChangeColor:focus {
+.menu_btn_wrap .hoverChangeColor:focus {
   color: #005d83;
 }
-.menu_lang .submenu a {
-  display: block;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-.menu_lang .submenu a:last-child {
+
+.menu_btn_wrap .submenu a:last-child {
   margin-bottom: 0;
 }

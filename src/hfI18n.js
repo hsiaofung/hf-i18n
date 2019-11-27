@@ -30,12 +30,8 @@ export class Language extends Component {
             {lang === "zhTW" ? "繁" : "EN"}
           </span>
           <div className="submenu">
-            <a>
-              <button onClick={() => i18n.changeLanguage("zhTW")}>繁</button>
-            </a>
-            <a>
-              <button onClick={() => i18n.changeLanguage("en")}>EN</button>
-            </a>
+            <button onClick={() => i18n.changeLanguage("zhTW")}>繁</button>
+            <button onClick={() => i18n.changeLanguage("en")}>EN</button>
           </div>
         </div>
       </div>
